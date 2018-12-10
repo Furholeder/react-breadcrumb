@@ -28,7 +28,7 @@ ReactDOM.render(<App />, document.getElementById('app'));
 
 | 参数      | 说明         | 类型              | 可选值 | 默认值 |
 | --------- | ------------ | ----------------- | ------ | ------ |
-| separator | 分隔符自定义 | String or Element |        | '/'    |
+| separator | 分隔符自定义 | String or Element |        | ' / '    |
 
 ## Development
 
@@ -36,6 +36,10 @@ ReactDOM.render(<App />, document.getElementById('app'));
 yarn
 
 yarn start
+
+Open http://localhost:8080
 ```
 
-http://localhost:8080
+## License
+
+MIT ©️ Li Kexin
