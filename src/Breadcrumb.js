@@ -1,14 +1,25 @@
-import React from 'react';
-import * as PropTypes from 'prop-types';
-
-const style = {};
+import React, { cloneElement } from 'react';
+import PropTypes from 'prop-types';
 
 const Breadcrumb = props => {
-  const {} = props;
+  const { separator, children } = props;
 
-  return <div style={style}>HI</div>;
+  const crumbs = React.Children.map(children, (element, index) => {
+    return cloneElement(element, {
+      separator,
+      key: index,
+    });
+  });
+
+  return <div>{crumbs}</div>;
 };
 
-Breadcrumb.propTypes = {};
+Breadcrumb.propTypes = {
+  separator: PropTypes.string,
+};
+
+Breadcrumb.defaultProps = {
+  separator: ' / ',
+};
 
 export default Breadcrumb;
